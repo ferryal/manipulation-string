@@ -36,15 +36,7 @@ function textCapital(textone) {
   var textwo = document.getElementById('input-two').value;
   console.log(textone);
   // NOTE: first letter
-  // var tempone = textone.charAt(0);
-  // var temptwo = textwo.charAt(0);
-  //
-  // var tempthree = textone.charAt(0).toUpperCase();
-  // var tempthree = textwo.charAt(0).toUpperCase();
-  //
-  // var tempfour = textone.slice(1);
-  // var tempfive = textwo.slice(1);
-  //
+
   return textone.charAt(0).toUpperCase().slice(1);
   console.log(textone);
 
