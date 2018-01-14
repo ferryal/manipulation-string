@@ -19,7 +19,7 @@ function uppercase() {
   var textone = document.getElementById('input-one').value;
   var textwo = document.getElementById('input-two').value;
 
-  var textuc = textone.toUpperCase() + " " + textwo.toUpperCase();
+  var textuc = "result toUpperCase :  " + textone.toUpperCase() + " " + textwo.toUpperCase();
   document.getElementById('result').innerHTML = textuc;
 }
 // NOTE:  lowercase text
@@ -27,28 +27,28 @@ function lowercase() {
   var textone = document.getElementById('input-one').value;
   var textwo = document.getElementById('input-two').value;
 
-  var textuc = textone.toLowerCase() + " " + textwo.toLowerCase();
+  var textuc = "result toLowerCase :  " + textone.toLowerCase() + " " + textwo.toLowerCase();
   document.getElementById('result').innerHTML = textuc;
 }
 
-function textCapital(textone) {
+function textCapital() {
   var textone = document.getElementById('input-one').value;
-  var textwo = document.getElementById('input-two').value;
-  console.log(textone);
-  // NOTE: first letter
-  // var tempone = textone.charAt(0);
-  // var temptwo = textwo.charAt(0);
-  //
-  // var tempthree = textone.charAt(0).toUpperCase();
-  // var tempthree = textwo.charAt(0).toUpperCase();
-  //
-  // var tempfour = textone.slice(1);
-  // var tempfive = textwo.slice(1);
-  //
-  return textone.charAt(0).toUpperCase().slice(1);
-  console.log(textone);
 
-  document.getElementById('result').innerHTML = tempfive;
+  // NOTE: text change to lowercase
+  textone = textone.toLowerCase();
+
+  // NOTE: text split into array of strings
+  textone = textone.split(' ');
+
+  console.log(textone);
+  // NOTE: looping get charAt index 0 change to uppercase
+  for (var i = 0; i < textone.length; i++) {
+    textone[i] = textone[i].charAt(0).toUpperCase() + textone[i].slice(1);
+    console.log(textone);
+  }
+
+  console.log(textone);
+  document.getElementById('result').innerHTML = "result text capital:  " + textone.join(' ');
 }
 document.getElementById('result-one').addEventListener('click', getText);
 document.getElementById('result-two').addEventListener('click', textCombine);
